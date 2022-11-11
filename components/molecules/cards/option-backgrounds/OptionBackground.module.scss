@@ -1,0 +1,41 @@
+
+
+.containerImgs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+}
+
+
+.imgs {
+    width: 70px;
+    height: 70px;
+    border: solid #fff 1px;
+    cursor: pointer;
+}
+
+.upload {
+    width: 200px;
+    height: 200px;
+    background-color: rgba(0, 0, 0, 0.3);
+    color: white;
+    border: solid #fff 1px;
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.file {
+    opacity: 100;
+}
+
+@media (min-width: 1000px) {
+    .imgs,
+    .upload {
+        width: 100px;
+        height: 100px;
+    }
+}

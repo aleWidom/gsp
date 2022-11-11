@@ -1,3 +1,6 @@
+
+/* @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&display=swap"); */
+
 html,
 body {
   padding: 0;
@@ -23,4 +26,18 @@ a {
     color: white;
     background: black;
   }
+}
+
+:root {
+  --grey: #f8f8f8;
+  --light-grey: #cacaca;
+  --strong-grey: #8c8c8c;
+  --white: #ffff;
+  --black: #000;
+  --black-uno: #1f1e48;
+  --black-dos: #707094;
+  --yellow-green: #d2ff3b;
+  --green: #45a424;
+  --error: #ef5350;
+  --status: #1166d6;
 }
