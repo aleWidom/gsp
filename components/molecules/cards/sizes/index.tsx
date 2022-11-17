@@ -1,11 +1,12 @@
 import { useContext } from 'react'
 import { GspContext } from '../../../../context/gsp/GspContext'
+import styles from './Sizes.module.scss'
 
 export const Sizes = () => {
 
     const { features, setFeatures, setPrice } = useContext(GspContext)
 
-    const handleSize = (size:string) => () => {
+    const handleSize = (size: string) => () => {
         if (size === '44px') {
             setPrice('2558')
         } else if (size === '66px') {
@@ -22,20 +23,22 @@ export const Sizes = () => {
     }
 
     return (
-        <>
-            <h2 className={'headerFont'}>4 Select Size</h2>
-            <button onClick={handleSize('44px')} className={'size'}>
-                <p>Small</p>
-                <small>(84x106cm)</small>
-            </button>
-            <button onClick={handleSize('66px')} className={'size'}>
-                <p>Medium</p>
-                <small>(167x213cm)</small>
-            </button>
-            <button onClick={handleSize('88px')} className={'size'}>
-                <p>Large</p>
-                <small>(251x319cm)</small>
-            </button>
-        </>
+        <div className={styles.cards}>
+            <h2 className={styles.header}>4- Select Size</h2>
+            <div className={styles.containerButtons}>
+                <button onClick={handleSize('44px')}  className={features.fontSize === '44px' ? styles.buttonSelected : styles.button}>
+                    <p className={styles.buttonHeader}>Small</p>
+                    <small>(84x106cm)</small>
+                </button>
+                <button onClick={handleSize('66px')}   className={features.fontSize === '66px' ? styles.buttonSelected : styles.button}>
+                    <p className={styles.buttonHeader}>Medium</p>
+                    <small>(167x213cm)</small>
+                </button>
+                <button onClick={handleSize('88px')}   className={features.fontSize === '88px' ? styles.buttonSelected : styles.button}>
+                    <p className={styles.buttonHeader}>Large</p>
+                    <small>(251x319cm)</small>
+                </button>
+            </div>
+        </div>
     )
 }

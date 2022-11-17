@@ -1,0 +1,27 @@
+@import '../../../../styles/utils';
+@import '../../../../styles/config';
+
+.cards {
+    @include cards
+}
+
+.header {
+    @include headers
+}
+
+.containerButtons {
+    @include containerBtn
+}
+
+.button {
+   @include btn('false')
+}
+
+.buttonSelected  {
+    @include btn('false');
+    border: solid 2px $color-secondary;
+ }
+
+.buttonHeader {
+    font-weight: bold;
+}

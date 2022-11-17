@@ -1,4 +1,24 @@
+@import '../../../../styles/utils';
+@import '../../../../styles/config';
+
+.cards {
+    @include cards
+}
+
+.header {
+    @include headers
+}
+
+.containerButtons {
+    @include containerBtn
+}
+
 .button {
-    background-color: rgb(103, 222, 18);
+   @include btn('false')
+}
+
+.buttonSelected {
+    @include btn('false');
+    border: solid 3px $color-secondary;
 }
 

@@ -30,10 +30,9 @@ export const WriteWord = () => {
 
 
     return (
-        <>
-            <h2 className={styles.header}>1 Text</h2>
-            <p className={styles.label}>What would you like your neon to say?</p>
+        <div className={styles.cardContainer}>
+            <p className={styles.header}>1- What would you like to say?</p>
             <textarea type={'text'} onChange={handleWord}  onKeyPress={handleEnter} value={value} className={styles.textarea} placeholder='Enter your text here'></textarea>
-        </>
+        </div>
     )
 }

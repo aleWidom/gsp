@@ -1,0 +1,53 @@
+@import 'config';
+
+@mixin respond($breakpoint) {
+  @if $breakpoint ==medium {
+    @media screen and (min-width: 768px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint ==tablet {
+    @media screen and (min-width: 500px) and (max-width: 1000px) {
+      @content;
+    }
+  }
+}
+
+@mixin cards {
+  font-family: $font-family-primary;
+}
+
+@mixin headers {
+  font-size: $font-size-primary;
+  font-weight: bold;
+}
+
+
+@mixin containerBtn {
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  gap: 4px;
+}
+
+
+@mixin btn($color) {
+  width: 20px;
+  height: 20px;
+  border: none;
+  border-radius: 2px;
+  &:hover {
+    cursor: pointer;
+  }
+  @if($color=='false') {
+    border: solid 1px $color-secondary;
+    background-color: $color-primary;
+    width: 183px;
+    height: 52px;
+    border-radius: 2px;
+    background-color: rgb(255, 255, 255);
+  }
+}

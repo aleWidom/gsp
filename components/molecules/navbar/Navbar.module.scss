@@ -1,12 +1,14 @@
+@import '../../../styles/config'; 
+
 .nav {
     padding: 26px 0px;
-    background-color: #000;
+    background-color: $color-primary;
   }
   
   .brand {
-    font-size: 32px;
+    font-size: 2rem;
     text-align: center;
-    font-weight: bold;
-    color: #fff;
+    font-weight: 400;
+    color: $color-secondary;
   }
   

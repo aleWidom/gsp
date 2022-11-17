@@ -1,1 +1,26 @@
+@import '../../../../styles/utils';
+@import '../../../../styles/config';
+
+.containerPrice {
+    @include cards;
+    @include containerBtn;
+    margin-top: 1rem;
+    width: 100%;
+}
+
+.price {
+    font-size: $font-size-secondary;
+}
+
+.add {
+    border: solid 1px $color-secondary;
+    background-color: $color-secondary;
+    width: 100%;
+    height: auto;
+    color: $color-primary;
+    height: 48px;
+     font-size: $font-size-primary;
+     font-weight: bold;
+   
+}
 

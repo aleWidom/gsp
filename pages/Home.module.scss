@@ -1,0 +1,19 @@
+@import '../styles/utils';
+
+/* .navbarPreview {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1;
+} */
+
+@include respond (medium) {
+    /* .navbarPreview {
+        position: static;
+    } */
+
+    .previewCustomize {
+        width: 100%;
+        display: flex;
+    }
+}

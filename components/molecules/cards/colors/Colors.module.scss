@@ -1,5 +1,30 @@
-.red {
-    background-color: red;
-    width: 30px;
-    height: 30px;
+@import '../../../../styles/utils';
+@import '../../../../styles/config';
+
+.cards {
+    @include cards
 }
+
+.header {
+    @include headers
+}
+
+.containerButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    @include btn('true')
+}
+
+.buttonSelected {
+    @include btn('true');
+    border: solid 2px $color-secondary;
+}
+
+
+.colorSelected {
+    font-weight: 400;
+}
+

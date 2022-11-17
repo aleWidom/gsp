@@ -1,0 +1,62 @@
+
+
+
+//Variables en Sass
+/* $color-primary: rgb(255, 255, 255);
+$color-secondary: rgb(0, 0, 0);
+$limit: 10;
+$unit: 8px; */
+
+
+
+//Funciones en Sass
+/* @function size($value) {
+    @return $value * $unit;
+}  */
+
+
+//@mixin (para reutilizar bloques de estilo)
+/* @mixin reset-pm {
+    padding: 0;
+    margin: 0;
+} */
+
+/* @mixin btn ($background-color, $color, $bold) {
+    background-color: $background-color;
+    color: $color;
+    border-radius: 50px;
+    padding: 20px 3px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: space-around;
+    //condicional
+    @if ($bold=='true') {
+        font-weight: bolder
+    }
+} */
+
+
+
+//Anidación
+/* ul {
+    @include reset-pm();
+    li {
+        a {
+            color: red;
+            @include btn($color-primary, $color-secondary, 'true');
+            &:hover *//*el & le dice que se lo aplique al padre*/ /*{
+                 @include btn ($color-secondary, $color-primary, '');
+            }
+        }
+    }
+}  */
+
+
+/*  Ciclos
+@for $i from 1 to $limit {
+    .p-va un numeral aca para que lo transforme a text{$i}  {
+        padding: $i *$unit  
+    } 
+}
+ */

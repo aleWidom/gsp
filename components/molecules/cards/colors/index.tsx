@@ -6,7 +6,7 @@ export const Colors = () => {
 
     const { features, setFeatures } = useContext(GspContext)
 
-    const handleColor = (color:string) => (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+    const handleColor = (color: string) => (evt: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
         setFeatures(
             {
                 ...features,
@@ -15,13 +15,20 @@ export const Colors = () => {
         )
     }
 
+    
+    const buttons:string[] = [
+        'white', 'palegoldenrod', 'yellow', 'orangered', 'red', 'fuchsia', 'purple', 'blue', 'cyan', 'green', 'lightblue'
+    ] 
+
+
     return (
-        <>
-            <h2>3 Color</h2>
-            <p>Color: {features.color}</p>
-            <button onClick={handleColor('red')} className={styles.red}></button>
-            <button onClick={handleColor('green')} className={styles.red}></button>
-            <button onClick={handleColor('blue')} className={styles.red}></button>
-        </>
+        <div className={styles.cards}>
+            <h2 className={styles.header}>3- Color: <small className={styles.colorSelected}>{features.color}</small></h2>
+            <div className={styles.containerButtons}>
+                {buttons.map((color) => (
+                    <button onClick={handleColor(color)}  className={features.color === color ? styles.buttonSelected : styles.button} style={{backgroundColor:color}} key={color}></button>
+                ))}
+            </div>
+        </div>
     )
 }
