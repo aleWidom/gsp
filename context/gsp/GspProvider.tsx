@@ -20,7 +20,7 @@ export const GspProvider = ({ children}: Props) => {
         {
             color: 'white',
             fontFamily: 'Arial',
-            fontSize: '44px',
+            fontSize: '16px',
         }
     )
 
