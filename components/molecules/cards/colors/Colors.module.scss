@@ -23,6 +23,11 @@
     border: solid 2px $color-secondary;
 }
 
+.buttonWhite {
+    @include btn('true');
+    border: solid 1px rgb(188, 188, 188);
+} 
+
 
 .colorSelected {
     font-weight: 400;

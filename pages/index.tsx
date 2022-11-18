@@ -1,12 +1,17 @@
 import Head from "next/head";
 import { GspProvider } from "../context";
-import { Navbar, Price } from "../components/molecules";
+import { Navbar } from "../components/molecules";
 import { Preview, Customize } from "../components/organisms";
+import useResponsive from '../hooks/useResponsive';
 import styles from './Home.module.scss'
 
 
 
 export default function Home() {
+
+
+  const { isDesktop } = useResponsive();
+
   return (
     <>
       <Head>
@@ -21,12 +26,22 @@ export default function Home() {
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"></link>
       </Head>
       <GspProvider>
+        {!isDesktop ?
+          <>
+            <div className={styles.navbarPreview}>
+              <Navbar />
+              <Preview />
+            </div>
+            <Customize />
+          </> :
+      <>
         <Navbar />
         <div className={styles.previewCustomize}>
           <Preview />
           <Customize />
         </div>
-      </GspProvider>
+      </>}
+    </GspProvider>
     </>
   )
 }
