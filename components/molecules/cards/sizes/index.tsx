@@ -7,11 +7,11 @@ export const Sizes = () => {
     const { features, setFeatures, setPrice } = useContext(GspContext)
 
     const handleSize = (size: string) => () => {
-        if (size === '44px') {
+        if (size === '16px') {
             setPrice('2558')
-        } else if (size === '66px') {
+        } else if (size === '21px') {
             setPrice('4756')
-        } else if (size === '88px') {
+        } else if (size === '26px') {
             setPrice('6525')
         }
         setFeatures(
