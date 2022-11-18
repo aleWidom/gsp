@@ -7,13 +7,13 @@ export const WriteWord = () => {
 
     const { value, setValueInput } = useContext(GspContext)
 
-    const handleWord = (e) => {
+    const handleWord = (e:any) => {
         setValueInput([
             e.target.value
         ])
     }
 
-     const handleEnter = (e) => {
+/*      const handleEnter = (e) => {
         if (e.key === 'Enter') {
             console.log('Enter')
              setValueInput([
@@ -23,7 +23,7 @@ export const WriteWord = () => {
             ) 
         }
     }
- 
+  */
 
 
 
@@ -32,7 +32,7 @@ export const WriteWord = () => {
     return (
         <div className={styles.cardContainer}>
             <p className={styles.header}>1- What would you like to say?</p>
-            <textarea type={'text'} onChange={handleWord}  onKeyPress={handleEnter} value={value} className={styles.textarea} placeholder='Enter your text here'></textarea>
+            <textarea onChange={handleWord} /*  onKeyPress={handleEnter} */ value={value} className={styles.textarea} placeholder='Enter your text here'></textarea>
         </div>
     )
 }
