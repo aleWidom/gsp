@@ -26,15 +26,15 @@ export const Sizes = () => {
         <div className={styles.cards}>
             <h2 className={styles.header}>4- Select Size</h2>
             <div className={styles.containerButtons}>
-                <button onClick={handleSize('44px')}  className={features.fontSize === '44px' ? styles.buttonSelected : styles.button}>
+                <button onClick={handleSize('16px')}  className={features.fontSize === '16px' ? styles.buttonSelected : styles.button}>
                     <p className={styles.buttonHeader}>Small</p>
                     <small>(84x106cm)</small>
                 </button>
-                <button onClick={handleSize('66px')}   className={features.fontSize === '66px' ? styles.buttonSelected : styles.button}>
+                <button onClick={handleSize('21px')}   className={features.fontSize === '21px' ? styles.buttonSelected : styles.button}>
                     <p className={styles.buttonHeader}>Medium</p>
                     <small>(167x213cm)</small>
                 </button>
-                <button onClick={handleSize('88px')}   className={features.fontSize === '88px' ? styles.buttonSelected : styles.button}>
+                <button onClick={handleSize('26px')}   className={features.fontSize === '26px' ? styles.buttonSelected : styles.button}>
                     <p className={styles.buttonHeader}>Large</p>
                     <small>(251x319cm)</small>
                 </button>
