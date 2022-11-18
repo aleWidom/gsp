@@ -7,7 +7,7 @@ export const WriteWord = () => {
 
     const { value, setValueInput } = useContext(GspContext)
 
-    const handleWord = (e:any) => {
+    const handleWord = (e) => {
         setValueInput([
             e.target.value
         ])
