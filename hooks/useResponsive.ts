@@ -9,7 +9,7 @@ const useResponsive = () => {
   }, []);
   
 
-  const isDesktop = width !== null && width > 768;
+  const isDesktop = width !== null && width >= 768;
   
   return {
     isDesktop,

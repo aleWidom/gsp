@@ -1,23 +1,26 @@
 import { useContext } from 'react'
 import { GspContext } from '../../../../context/gsp/GspContext'
+import useResponsive from '../../../../hooks/useResponsive';
 import styles from './Sizes.module.scss'
 
 export const Sizes = () => {
 
     const { features, setFeatures, setPrice } = useContext(GspContext)
 
-    const handleSize = (size: string) => () => {
-        if (size === '16px') {
+    const { isDesktop } = useResponsive();
+
+    const handleSize = (size: string, fontSize: string) => () => {
+        if (size === 'small') {
             setPrice('2558')
-        } else if (size === '21px') {
+        } else if (size === 'medium') {
             setPrice('4756')
-        } else if (size === '26px') {
+        } else if (size === 'large') {
             setPrice('6525')
         }
         setFeatures(
             {
                 ...features,
-                fontSize: size
+                fontSize
             }
         )
     }
@@ -26,18 +29,34 @@ export const Sizes = () => {
         <div className={styles.cards}>
             <h2 className={styles.header}>4- Select Size</h2>
             <div className={styles.containerButtons}>
-                <button onClick={handleSize('16px')}  className={features.fontSize === '16px' ? styles.buttonSelected : styles.button}>
-                    <p className={styles.buttonHeader}>Small</p>
-                    <small>(84x106cm)</small>
-                </button>
-                <button onClick={handleSize('21px')}   className={features.fontSize === '21px' ? styles.buttonSelected : styles.button}>
-                    <p className={styles.buttonHeader}>Medium</p>
-                    <small>(167x213cm)</small>
-                </button>
-                <button onClick={handleSize('26px')}   className={features.fontSize === '26px' ? styles.buttonSelected : styles.button}>
-                    <p className={styles.buttonHeader}>Large</p>
-                    <small>(251x319cm)</small>
-                </button>
+                {isDesktop ?
+                    <>
+                        <button onClick={handleSize('small', '75px')}  className={features.fontSize === '75px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Small</p>
+                            <small>(84x106cm)</small>
+                        </button>
+                        <button onClick={handleSize('medium', '80px')} className={features.fontSize === '80px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Medium</p>
+                            <small>(167x213cm)</small>
+                        </button>
+                        <button onClick={handleSize('large', '82px')} className={features.fontSize === '82px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Large</p>
+                            <small>(251x319cm)</small>
+                        </button>
+                    </> :
+                    <>
+                        <button onClick={handleSize('small', '16px') } className={features.fontSize === '16px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Small</p>
+                            <small>(84x106cm)</small>
+                        </button>
+                        <button onClick={handleSize('medium', '21px')} className={features.fontSize === '21px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Medium</p>
+                            <small>(167x213cm)</small>
+                        </button>
+                        <button onClick={handleSize('large', '26px')} className={features.fontSize === '26px' ? styles.buttonSelected : styles.button}>
+                            <p className={styles.buttonHeader}>Large</p>
+                            <small>(251x319cm)</small>
+                        </button></>}
             </div>
         </div>
     )

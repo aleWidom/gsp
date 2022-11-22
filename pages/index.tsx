@@ -4,9 +4,6 @@ import { Navbar } from "../components/molecules";
 import { Preview, Customize } from "../components/organisms";
 import useResponsive from '../hooks/useResponsive';
 import styles from './Home.module.scss'
-import Link from "next/link";
-
-
 
 export default function Home() {
 
