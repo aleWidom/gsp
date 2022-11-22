@@ -7,13 +7,13 @@ export const WriteWord = () => {
 
     const { value, setValueInput } = useContext(GspContext)
 
-    const handleWord = (e:  React.ChangeEvent<HTMLInputElement>) => {
+    const handleWord = (e: any /*  React.ChangeEvent<HTMLInputElement> */) => {
         setValueInput([
             e.target.value
         ])
     }
 
-    const handleEnter = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    const handleEnter = (e: any /* React.KeyboardEvent<HTMLTextAreaElement> */) => {
         if (e.key === 'Enter') {
             console.log('Enter')
             setValueInput([
