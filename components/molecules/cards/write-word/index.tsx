@@ -1,4 +1,4 @@
-import { useContext } from 'react'
+import React, { useContext } from 'react'
 import { GspContext } from '../../../../context/gsp/GspContext'
 import styles from './WriteWord.module.scss'
 
@@ -7,13 +7,13 @@ export const WriteWord = () => {
 
     const { value, setValueInput } = useContext(GspContext)
 
-    const handleWord = (e: any /*  React.ChangeEvent<HTMLInputElement> */) => {
+    const handleWord = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setValueInput([
             e.target.value
         ])
     }
 
-    const handleEnter = (e: any /* React.KeyboardEvent<HTMLTextAreaElement> */) => {
+    const handleEnter = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
         if (e.key === 'Enter') {
             console.log('Enter')
             setValueInput([
