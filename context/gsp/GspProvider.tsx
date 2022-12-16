@@ -17,7 +17,7 @@ export const GspProvider = ({ children}: Props) => {
 
     const [value, setValueInput] = useState<string[]>(['Start'])
 
-    const [price, setPrice] = useState<string>('2558')
+    const [price, setPrice] = useState<string>('6458')
 
     const [features, setFeatures] = useState<Features>(
         {

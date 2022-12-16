@@ -11,11 +11,11 @@ export const Sizes = () => {
 
     const handleSize = (size: string, fontSize: string) => () => {
         if (size === 'small') {
-            setPrice('2558')
+            setPrice('6458')
         } else if (size === 'medium') {
-            setPrice('4756')
+            setPrice('10425')
         } else if (size === 'large') {
-            setPrice('6525')
+            setPrice('12749')
         }
         setFeatures(
             {
