@@ -6,7 +6,7 @@ import useResponsive from '../../../hooks/useResponsive';
 
 export const TextExample = () => {
 
-  const { features, setFeatures, value } = useContext(GspContext)
+  const { features, setFeatures, value} = useContext(GspContext)
 
   const { isDesktop } = useResponsive();
   

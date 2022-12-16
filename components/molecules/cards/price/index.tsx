@@ -9,7 +9,7 @@ export const Price = () => {
   return (
     <div className={styles.containerPrice}>
       <h4 className={styles.price}>${price}</h4>
-      <button className={styles.add}>Add to Cart</button>
+      <button className={styles.add}></button>
     </div>
   )
 }

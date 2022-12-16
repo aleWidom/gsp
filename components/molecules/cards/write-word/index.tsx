@@ -5,7 +5,7 @@ import styles from './WriteWord.module.scss'
 
 export const WriteWord = () => {
 
-    const { value, setValueInput } = useContext(GspContext)
+    const {value, setValueInput } = useContext(GspContext)
 
     const handleWord = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
         setValueInput([
@@ -13,21 +13,10 @@ export const WriteWord = () => {
         ])
     }
 
-    const handleEnter = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
-        if (e.key === 'Enter') {
-            console.log('Enter')
-            setValueInput([
-                ...value,
-
-            ]
-            )
-        }
-    }
-
     return (
         <div className={styles.cardContainer}>
             <p className={styles.header}>1- What would you like to say?</p>
-            <textarea onChange={handleWord} onKeyPress={handleEnter} value={value} className={styles.textarea} placeholder='Enter your text here'></textarea>
+            <textarea onChange={handleWord} value={value} className={styles.textarea} placeholder='Enter your text here'></textarea>
         </div>
     )
 }

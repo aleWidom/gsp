@@ -15,7 +15,7 @@ export const GspProvider = ({ children}: Props) => {
 
     const [background, setBackground] = useState<string>('https://cdn.shopify.com/s/files/1/0361/0781/3004/files/CB-BG-image_brick_new.png?v=1666069694')
 
-    const [value, setValueInput] = useState<string[]>(['Start...'])
+    const [value, setValueInput] = useState<string[]>(['Start'])
 
     const [price, setPrice] = useState<string>('2558')
 

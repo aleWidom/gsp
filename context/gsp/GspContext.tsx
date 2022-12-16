@@ -6,7 +6,7 @@ interface ContextProps {
     setFeatures: (description: Features ) => void,
     value: string[],
     background: String,
-    setBackground: (description: string) => void,
+    setBackground: (description: string | any) => void,
     setValueInput: (description: string[]) => void,
     price: string,
     setPrice: (price: string) => void,

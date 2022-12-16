@@ -23,7 +23,10 @@ export const Fonts = () => {
       <div className={styles.containerButtons}>
         <button onClick={handleFont('Arial')} className={features.fontFamily === 'Arial' ? styles.buttonSelected : styles.button} >Arial</button>
         <button onClick={handleFont('Times New Roman')} className={features.fontFamily === 'Times New Roman' ? styles.buttonSelected : styles.button} >Times</button>
-        <button onClick={handleFont('Verdana')} className={features.fontFamily === 'Verdana' ? styles.buttonSelected : styles.button} >Verdana</button>
+        <button onClick={handleFont('Ink Free Regular')} className={features.fontFamily === 'Ink Free Regular' ? styles.buttonSelected : styles.button} >Ink</button>
+        <button onClick={handleFont('Courier')} className={features.fontFamily === 'Courier' ? styles.buttonSelected : styles.button} >Courier</button>
+        <button onClick={handleFont('Simple Melody Regular')} className={features.fontFamily === 'Simple Melody Regular' ? styles.buttonSelected : styles.button} >Simple</button>
+{/*         <button onClick={handleFont('Verdana')} className={features.fontFamily === 'Verdana' ? styles.buttonSelected : styles.button} >Verdana</button> */}
       </div>
     </div>
   )
